@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/redlist_birds_api.props" />
+</Project>
