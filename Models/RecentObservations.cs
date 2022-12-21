@@ -1,22 +1,23 @@
-using Newtonsoft.Json;
-
 namespace redlist_birds_api.Models;
 
 public class RecentObservations 
 {
-    
-    public string comName { get; set; }
     // Common name of specie
+    public string comName { get; set; }
     
+    // Location 
     public string locName { get; set; }
     
-    
+    // Individual Id for checklist
+    public string subId {get; set; }
 
+    // Date and time of observation
     public string obsDt {get; set; }
-    // Location where found
-   
+    
+    // How many species were observed
     public int howMany { get; set; }
 
-    public string locId { get; set; }
-    // Quantity of species
+    // Individual Id for each location
+    public string locId {get; set; }
+
 }
