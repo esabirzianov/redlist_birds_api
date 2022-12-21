@@ -4,16 +4,31 @@ namespace redlist_birds_api.DatabaseConnection;
 
 public class DatabaseSetup
 {
-    public string connectionString = "Host = localhost; Username = postgres; Password = Emulka7823; Database = dbforbirds";
+    public static string connectionString = "Host = localhost; Username = postgres; Password = Emulka7823; Database = dbforbirds";
+    
     // Connection string to Database
-
-    // Если мы не используем Data Source -> то нужно самим открывать соединения коммандами (openAsync)
-    // Если мы используем Data Source -> то Npgsql все сделает за нас..
-    public async Task OpenConnection(string conString)
+    public static async Task OpenConnection(string conString, string comName, int howMany)
     {
         await using var conn = new NpgsqlConnection(conString);
-        await conn.OpenAsync();
+        await using var cmd = new NpgsqlCommand("INSERT INTO  ebird_data (common_name, how_many_observed) VALUES (@comName, @howMany) ", conn) 
+        {
+            Parameters =  
+            {
+                new ("comName", comName),
+                new ("howMany", howMany)
+            }
+        };
+                await conn.OpenAsync();
+                await cmd.ExecuteNonQueryAsync();
+                await conn.CloseAsync();
+        }
+        
+
+       
+
+        
     }
+
 
     // await using var command = dataSource.CreateCommand("INSERT INTO some_table (some_field) VALUES (8)");
     //await command.ExecuteNonQueryAsync();
@@ -47,4 +62,3 @@ public class DatabaseSetup
 
     */
 
-}
