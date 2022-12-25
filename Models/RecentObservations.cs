@@ -17,7 +17,4 @@ public class RecentObservations
     // How many species were observed
     public int howMany { get; set; }
 
-    // Individual Id for each location
-    public string locId {get; set; }
-
 }

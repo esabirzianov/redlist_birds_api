@@ -15,13 +15,13 @@ public class EbirdConnection
 
     public async Task<List<RecentObservations>> GetRequestEBirdData()
     {
-        // Get the URL from appsetings.json to connect with EBird Api
+        // Get the URL from appsettings.json to connect with EBird Api
         var url = _configuration.GetValue<string>("EBirdInformation:EbirdURL");
 
         HttpRequestMessage requestMessage = new HttpRequestMessage();
         requestMessage.RequestUri = new Uri(url);
 
-        // Add individual Api Key and Value to request headers to accept Api
+        // Add individual Api Key and Value to request headers to accept Api from asppsettings.json
         requestMessage.Headers.Add(_configuration.GetValue<string>("EBirdInformation:EBirdKey"), _configuration.GetValue<string>("EBirdInformation:EBirdValue"));
 
         HttpResponseMessage response = new HttpResponseMessage ();
