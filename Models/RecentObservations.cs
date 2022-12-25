@@ -2,11 +2,19 @@ namespace redlist_birds_api.Models;
 
 public class RecentObservations 
 {
-    public string comName { get; set; }
     // Common name of specie
-    public string LocName { get; set; }
-    // Location where found
+    public string comName { get; set; }
     
-    public int HowMany { get; set; }
-    // Quantity of species
+    // Location 
+    public string locName { get; set; }
+    
+    // Individual Id for checklist
+    public string subId {get; set; }
+
+    // Date and time of observation
+    public string obsDt {get; set; }
+    
+    // How many species were observed
+    public int howMany { get; set; }
+
 }
