@@ -6,6 +6,8 @@ public interface IGetMethods
 {
    Task<List<RecentObservations>> GetRecentObservations ();
    Task<List<RecentObservations>> GetRecentObservationsByCommonName(string comName);
-   Task<List<RecentObservations>> CreateNewObservation (string _comName, string _locName, int _howMany);
-   Task<RecentObservations> UpdateObservation (string obsId, string comName, int howMany);
+   Task<RecentObservations> CreateNewObservation (string _comName, string _locName, int _howMany);
+   Task<RecentObservations> UpdateObservation (string subId, string comName, int howMany); 
+   Task DeleteObservation(string subId);
+   
 }
