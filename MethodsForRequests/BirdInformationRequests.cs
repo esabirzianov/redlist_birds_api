@@ -6,12 +6,12 @@ using redlist_birds_api.ExternalApiSetup;
 
 namespace redlist_birds_api.MethodsForRequests;
 
-public class GetMethods : IGetMethods
+public class BirdInformationRequests : IBirdInformationRequests
 {
 
     public IConfiguration _configuration;
 
-    public GetMethods(IConfiguration configuration)
+    public BirdInformationRequests(IConfiguration configuration)
     {
         _configuration = configuration;
     }

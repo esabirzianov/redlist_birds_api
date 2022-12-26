@@ -11,19 +11,19 @@ namespace redlist_birds_api.Controllers;
 [Route("api/[controller]")]
 public class BirdsInformationController : ControllerBase
 {   
-    private readonly IGetMethods _GetMethods;
+    private readonly IBirdInformationRequests _birdInformationRequests;
     public IConfiguration _configuration ;
 
-    public BirdsInformationController (IGetMethods getMethod, IConfiguration configuration) 
+    public BirdsInformationController (IBirdInformationRequests birdInformationRequests, IConfiguration configuration) 
     {
-        _GetMethods = getMethod;
+        _birdInformationRequests = birdInformationRequests;
         _configuration = configuration;
     }
     
     [HttpGet]
     public async Task<List<RecentObservations>> GetObservationsData()
     {
-        return await _GetMethods.GetRecentObservations();
+        return await _birdInformationRequests.GetRecentObservations();
     }
 
     [HttpGet("{comName}")]
@@ -31,32 +31,29 @@ public class BirdsInformationController : ControllerBase
     public async Task<List<RecentObservations>> GetObservationsbyCommonName (string comName) 
     {
        
-        return await _GetMethods.GetRecentObservationsByCommonName(comName);
+        return await _birdInformationRequests.GetRecentObservationsByCommonName(comName);
     }
 
     
     [HttpPost]
     public async Task<RecentObservations> PostNewObservation (string _comName, string _locName, int _howMany) 
     {
-        return await _GetMethods.CreateNewObservation(_comName, _locName, _howMany);
+        return await _birdInformationRequests.CreateNewObservation(_comName, _locName, _howMany);
     }
 
     [HttpDelete("{sunId}")]
 
     public async Task DeleteObservations (string subId) 
     {
-        await _GetMethods.DeleteObservation(subId);
+        await _birdInformationRequests.DeleteObservation(subId);
     }
     
     [HttpPut]
     
     public async Task<RecentObservations> UpdateObservation (string subId, string comName, int howMany) 
     {
-       return await _GetMethods.UpdateObservation(subId,comName,howMany);
+       return await _birdInformationRequests.UpdateObservation(subId,comName,howMany);
     }
-
-    
-
 
     
 }

@@ -15,7 +15,7 @@ internal class Program
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-        builder.Services.AddSingleton<IGetMethods, GetMethods>();
+        builder.Services.AddSingleton<IBirdInformationRequests, BirdInformationRequests>();
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

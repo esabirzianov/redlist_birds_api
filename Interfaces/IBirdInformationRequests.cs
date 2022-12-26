@@ -2,7 +2,7 @@ using redlist_birds_api.Models;
 
 namespace redlist_birds_api.Interfaces;
 
-public interface IGetMethods 
+public interface IBirdInformationRequests 
 {
    Task<List<RecentObservations>> GetRecentObservations ();
    Task<List<RecentObservations>> GetRecentObservationsByCommonName(string comName);
