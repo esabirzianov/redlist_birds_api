@@ -11,53 +11,60 @@ namespace redlist_birds_api.Controllers;
 [Route("api/[controller]")]
 public class BirdsInformationController : ControllerBase
 {   
-    private readonly IGetMethods _GetMethods;
+    private readonly IMethodsForRequests _IMethodsForRequests;
     public IConfiguration _configuration ;
-
-    public BirdsInformationController (IGetMethods getMethod, IConfiguration configuration) 
+    public BirdsInformationController (IMethodsForRequests methodsForRequests, IConfiguration configuration) 
     {
-        _GetMethods = getMethod;
+        _IMethodsForRequests = methodsForRequests;
         _configuration = configuration;
     }
     
     [HttpGet]
-    public async Task<List<RecentObservations>> GetObservationsData()
+    [ProducesResponseType(StatusCodes.Status200OK)]
+
+    public async Task<ActionResult<List<RecentObservations>>> GetObservationsData()
     {
-        return await _GetMethods.GetRecentObservations();
+        var result = await _IMethodsForRequests.GetRecentObservations();
+        return Ok(result);
     }
 
     [HttpGet("{comName}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
 
-    public async Task<List<RecentObservations>> GetObservationsbyCommonName (string comName) 
+    public async Task<ActionResult<List<RecentObservations>>> GetObservationsbyCommonName (string comName) 
     {
-       
-        return await _GetMethods.GetRecentObservationsByCommonName(comName);
+        var result =  await _IMethodsForRequests.GetRecentObservationsByCommonName(comName);
+        return Ok(result);
     }
 
     
     [HttpPost]
-    public async Task<RecentObservations> PostNewObservation (string _comName, string _locName, int _howMany) 
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    public async Task<ActionResult<RecentObservations>> PostNewObservation (string _comName, string _locName, int _howMany) 
     {
-        return await _GetMethods.CreateNewObservation(_comName, _locName, _howMany);
+        var result =  await _IMethodsForRequests.CreateObservation(_comName, _locName, _howMany);
+        return Ok(result);
     }
 
-    [HttpDelete("{sunId}")]
-
-    public async Task DeleteObservations (string subId) 
+    [HttpDelete("{subId}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult> DeleteObservations (string subId) 
     {
-        await _GetMethods.DeleteObservation(subId);
+        await _IMethodsForRequests.DeleteObservation(subId);
+        return Ok();
     }
     
     [HttpPut]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     
-    public async Task<RecentObservations> UpdateObservation (string subId, string comName, int howMany) 
+    public async Task<ActionResult> UpdateObservation (string subId, string comName, int howMany) 
     {
-       return await _GetMethods.UpdateObservation(subId,comName,howMany);
+        await _IMethodsForRequests.UpdateObservation(subId,comName,howMany);
+        return Ok();
     }
-
-    
-
-
     
 }
 

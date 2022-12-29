@@ -2,8 +2,7 @@ using redlist_birds_api;
 using redlist_birds_api.MethodsForRequests;
 using redlist_birds_api.Interfaces;
 using Npgsql;
-
-
+using redlist_birds_api.DatabaseContext;
 
 internal class Program
 {
@@ -15,7 +14,8 @@ internal class Program
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-        builder.Services.AddSingleton<IGetMethods, GetMethods>();
+        builder.Services.AddSingleton<IMethodsForRequests, MethodsForRequests>();
+        builder.Services.AddSingleton<IDbConnectionHelper, DbConnectionHelper> ();
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

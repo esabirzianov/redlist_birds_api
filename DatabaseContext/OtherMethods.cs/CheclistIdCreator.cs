@@ -1,6 +1,6 @@
 namespace redlist_birds_api.DatabaseContext;
 
-public class IDCreation 
+public class ChecklistIdCreator 
 {
     public static string CreateLocId () 
     {

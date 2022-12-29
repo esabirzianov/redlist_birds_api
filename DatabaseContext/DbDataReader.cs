@@ -3,7 +3,7 @@ using redlist_birds_api.Models;
 
 namespace redlist_birds_api.DatabaseContext;
 
-public class ReadDataFromDatabase 
+public class DbDataReader 
 {
     public static RecentObservations ReadObservationsFromDb (NpgsqlDataReader reader) 
     {
