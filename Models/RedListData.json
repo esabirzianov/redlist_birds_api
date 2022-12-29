@@ -1,0 +1,289 @@
+[
+  {
+    "SpcRecID": 294,
+    "ScientificName": "Lyrurus mlokosiewiczi",
+    "EnglishName": "Caucasian Grouse",
+    "Family": "Phasianidae (Pheasants, Partridges, Turkeys, Grouse)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 359,
+    "ScientificName": "Oxyura leucocephala",
+    "EnglishName": "White-headed Duck",
+    "Family": "Anatidae (Ducks, Geese, Swans)",
+    "RedListCategory": "EN"
+  },
+  {
+    "SpcRecID": 387,
+    "ScientificName": "Branta ruficollis",
+    "EnglishName": "Red-breasted Goose",
+    "Family": "Anatidae (Ducks, Geese, Swans)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 377,
+    "ScientificName": "Anser erythropus",
+    "EnglishName": "Lesser White-fronted Goose",
+    "Family": "Anatidae (Ducks, Geese, Swans)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 112636,
+    "ScientificName": "Melanitta fusca",
+    "EnglishName": "Velvet Scoter",
+    "Family": "Anatidae (Ducks, Geese, Swans)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 467,
+    "ScientificName": "Marmaronetta angustirostris",
+    "EnglishName": "Marbled Teal",
+    "Family": "Anatidae (Ducks, Geese, Swans)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 472,
+    "ScientificName": "Aythya ferina",
+    "EnglishName": "Common Pochard",
+    "Family": "Anatidae (Ducks, Geese, Swans)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 476,
+    "ScientificName": "Aythya nyroca",
+    "EnglishName": "Ferruginous Duck",
+    "Family": "Anatidae (Ducks, Geese, Swans)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3640,
+    "ScientificName": "Podiceps auritus",
+    "EnglishName": "Horned Grebe",
+    "Family": "Podicipedidae (Grebes)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 2498,
+    "ScientificName": "Streptopelia turtur",
+    "EnglishName": "European Turtle-dove",
+    "Family": "Columbidae (Pigeons, Doves)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 2759,
+    "ScientificName": "Tetrax tetrax",
+    "EnglishName": "Little Bustard",
+    "Family": "Otididae (Bustards)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 2760,
+    "ScientificName": "Otis tarda",
+    "EnglishName": "Great Bustard",
+    "Family": "Otididae (Bustards)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 32131,
+    "ScientificName": "Chlamydotis macqueenii",
+    "EnglishName": "Asian Houbara",
+    "Family": "Otididae (Bustards)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 3937,
+    "ScientificName": "Puffinus yelkouan",
+    "EnglishName": "Yelkouan Shearwater",
+    "Family": "Procellariidae (Petrels, Shearwaters)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 3791,
+    "ScientificName": "Geronticus eremita",
+    "EnglishName": "Northern Bald Ibis",
+    "Family": "Threskiornithidae (Ibises, Spoonbills)",
+    "RedListCategory": "EN"
+  },
+  {
+    "SpcRecID": 3811,
+    "ScientificName": "Pelecanus crispus",
+    "EnglishName": "Dalmatian Pelican",
+    "Family": "Pelecanidae (Pelicans)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3088,
+    "ScientificName": "Haematopus ostralegus",
+    "EnglishName": "Eurasian Oystercatcher",
+    "Family": "Haematopodidae (Oystercatchers)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3153,
+    "ScientificName": "Vanellus vanellus",
+    "EnglishName": "Northern Lapwing",
+    "Family": "Charadriidae (Plovers)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3172,
+    "ScientificName": "Vanellus gregarius",
+    "EnglishName": "Sociable Lapwing",
+    "Family": "Charadriidae (Plovers)",
+    "RedListCategory": "CR"
+  },
+  {
+    "SpcRecID": 3011,
+    "ScientificName": "Numenius tenuirostris",
+    "EnglishName": "Slender-billed Curlew",
+    "Family": "Scolopacidae (Sandpipers, Snipes, Phalaropes)",
+    "RedListCategory": "CR"
+  },
+  {
+    "SpcRecID": 3012,
+    "ScientificName": "Numenius arquata",
+    "EnglishName": "Eurasian Curlew",
+    "Family": "Scolopacidae (Sandpipers, Snipes, Phalaropes)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3005,
+    "ScientificName": "Limosa lapponica",
+    "EnglishName": "Bar-tailed Godwit",
+    "Family": "Scolopacidae (Sandpipers, Snipes, Phalaropes)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3003,
+    "ScientificName": "Limosa limosa",
+    "EnglishName": "Black-tailed Godwit",
+    "Family": "Scolopacidae (Sandpipers, Snipes, Phalaropes)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3041,
+    "ScientificName": "Calidris canutus",
+    "EnglishName": "Red Knot",
+    "Family": "Scolopacidae (Sandpipers, Snipes, Phalaropes)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3057,
+    "ScientificName": "Calidris ferruginea",
+    "EnglishName": "Curlew Sandpiper",
+    "Family": "Scolopacidae (Sandpipers, Snipes, Phalaropes)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 2989,
+    "ScientificName": "Gallinago media",
+    "EnglishName": "Great Snipe",
+    "Family": "Scolopacidae (Sandpipers, Snipes, Phalaropes)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3189,
+    "ScientificName": "Glareola nordmanni",
+    "EnglishName": "Black-winged Pratincole",
+    "Family": "Glareolidae (Coursers, Pratincoles)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3255,
+    "ScientificName": "Rissa tridactyla",
+    "EnglishName": "Black-legged Kittiwake",
+    "Family": "Laridae (Gulls, Terns, Skimmers)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 3217,
+    "ScientificName": "Larus audouinii",
+    "EnglishName": "Audouin's Gull",
+    "Family": "Laridae (Gulls, Terns, Skimmers)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 3370,
+    "ScientificName": "Gypaetus barbatus",
+    "EnglishName": "Bearded Vulture",
+    "Family": "Accipitridae (Hawks, Eagles)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3371,
+    "ScientificName": "Neophron percnopterus",
+    "EnglishName": "Egyptian Vulture",
+    "Family": "Accipitridae (Hawks, Eagles)",
+    "RedListCategory": "EN"
+  },
+  {
+    "SpcRecID": 3380,
+    "ScientificName": "Aegypius monachus",
+    "EnglishName": "Cinereous Vulture",
+    "Family": "Accipitridae (Hawks, Eagles)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3531,
+    "ScientificName": "Clanga clanga",
+    "EnglishName": "Greater Spotted Eagle",
+    "Family": "Accipitridae (Hawks, Eagles)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 3533,
+    "ScientificName": "Aquila nipalensis",
+    "EnglishName": "Steppe Eagle",
+    "Family": "Accipitridae (Hawks, Eagles)",
+    "RedListCategory": "EN"
+  },
+  {
+    "SpcRecID": 3535,
+    "ScientificName": "Aquila heliaca",
+    "EnglishName": "Eastern Imperial Eagle",
+    "Family": "Accipitridae (Hawks, Eagles)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 3409,
+    "ScientificName": "Circus macrourus",
+    "EnglishName": "Pallid Harrier",
+    "Family": "Accipitridae (Hawks, Eagles)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 3603,
+    "ScientificName": "Falco vespertinus",
+    "EnglishName": "Red-footed Falcon",
+    "Family": "Falconidae (Falcons, Caracaras)",
+    "RedListCategory": "VU"
+  },
+  {
+    "SpcRecID": 3619,
+    "ScientificName": "Falco cherrug",
+    "EnglishName": "Saker Falcon",
+    "Family": "Falconidae (Falcons, Caracaras)",
+    "RedListCategory": "EN"
+  },
+  {
+    "SpcRecID": 5548,
+    "ScientificName": "Lanius senator",
+    "EnglishName": "Woodchat Shrike",
+    "Family": "Laniidae (Shrikes)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 6406,
+    "ScientificName": "Turdus iliacus",
+    "EnglishName": "Redwing",
+    "Family": "Turdidae (Thrushes)",
+    "RedListCategory": "NT"
+  },
+  {
+    "SpcRecID": 8940,
+    "ScientificName": "Emberiza cineracea",
+    "EnglishName": "Cinereous Bunting",
+    "Family": "Emberizidae (Old World Buntings)",
+    "RedListCategory": "NT"
+  }
+]
