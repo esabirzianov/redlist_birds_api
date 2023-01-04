@@ -3,18 +3,19 @@ using redlist_birds_api.Models;
 
 namespace redlist_birds_api.DatabaseContext;
 
-public class InsertQueries 
+public class InsertQueries : IInsertQueries
 {
     public IDbConnectionHelper _dbConnectionHelper;
 
-    public InsertQueries( IDbConnectionHelper dbConnectionHelper)
+    public InsertQueries(IDbConnectionHelper dbConnectionHelper)
     {
         _dbConnectionHelper = dbConnectionHelper;
     }
 
     public async Task InsertObservationsIntoDb(string comName, string locName, string subId, string obsDt, int howMany)
     {
-        var queryText = "INSERT INTO ebird_data (common_name, location_name, checklist_id, observation_date, how_many_observed) VALUES (@comName, @locName, @subId, @obsDt, @howMany) ";
+        var queryText = @"INSERT INTO ebird_data (common_name, location_name, checklist_id, observation_date, how_many_observed) 
+        VALUES (@comName, @locName, @subId, @obsDt, @howMany) ";
         await using var cmd = new NpgsqlCommand(queryText)
         {
             Parameters =
@@ -36,7 +37,7 @@ public class InsertQueries
     public async Task<RecentObservations> InsertSingleObservationInDb(string _comName, string _locName, int _howMany)
     {
         var newSubId = ChecklistIdCreator.CreateLocId();
-        string ObsDt = Convert.ToString(DateTime.UtcNow);
+        string ObsDt = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
         RecentObservations newObservation = new RecentObservations()
         {
             comName = _comName,
@@ -47,7 +48,8 @@ public class InsertQueries
 
         };
 
-        await using var cmd = new NpgsqlCommand("INSERT INTO  ebird_data (common_name, location_name, checklist_id, observation_date, how_many_observed) VALUES (@comName, @locName, @newSubId, @ObsDt, @howMany) ")
+        await using var cmd = new NpgsqlCommand(@"INSERT INTO  ebird_data (common_name, location_name, checklist_id, observation_date, how_many_observed) 
+        VALUES (@comName, @locName, @newSubId, @ObsDt, @howMany) ")
         // In database we have Constraint to not add duplicate fields, so we don't have information about 
         // Similar checklists from group of people.
         {

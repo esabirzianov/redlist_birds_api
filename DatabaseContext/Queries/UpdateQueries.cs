@@ -1,10 +1,9 @@
 using Npgsql;
-using redlist_birds_api.Interfaces;
 using redlist_birds_api.Models;
 
 namespace redlist_birds_api.DatabaseContext;
 
-public class UpdateQueries 
+public class UpdateQueries : IUpdateQueries
 
 {
     private readonly IDbConnectionHelper _dbConnectionHelper;

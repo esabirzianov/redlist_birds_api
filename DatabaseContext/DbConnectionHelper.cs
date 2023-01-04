@@ -32,7 +32,7 @@ public class DbConnectionHelper : IDbConnectionHelper
         }
     }
 
-    public async Task<List<RecentObservations>> ConnectionWithSelect(NpgsqlCommand command)
+    public async Task<List<RecentObservations>> SelectRecentObservationsConnection (NpgsqlCommand command)
     {
         List<RecentObservations> result = new ();
         await using var conn = new NpgsqlConnection(_configuration.GetConnectionString("Ebird_cs"));
@@ -51,5 +51,45 @@ public class DbConnectionHelper : IDbConnectionHelper
         await conn.CloseAsync();
         return result;
     }
+
+    public async Task<List<RedListData>> SelectRedListDataConnection (NpgsqlCommand command)
+    {
+        List<RedListData> result = new ();
+        await using var conn = new NpgsqlConnection(_configuration.GetConnectionString("Ebird_cs"));
+        command.Connection = conn;
+
+        await conn.OpenAsync();
+        await using (NpgsqlDataReader reader = await command.ExecuteReaderAsync())
+        {
+            while (await reader.ReadAsync())
+            {
+                RedListData redListData = DbDataReader.ReadObservationsFromRedList(reader);
+                result.Add(redListData);
+            }
+        }
+        await conn.CloseAsync();
+        return result;
+    }
+
+    public async Task<List<RedListRecentObservations>> SelectRedListRecentObsConnection(NpgsqlCommand command)
+    {
+        List<RedListRecentObservations> result = new ();
+        await using var conn = new NpgsqlConnection(_configuration.GetConnectionString("Ebird_cs"));
+        command.Connection = conn;
+
+        await conn.OpenAsync();
+        await using (NpgsqlDataReader reader = await command.ExecuteReaderAsync())
+        {
+            while (await reader.ReadAsync())
+            // Read data from Database and convert it from NpgsqlDataReader format to List<Recent<Observations>>
+            {
+                RedListRecentObservations redListData = DbDataReader.ReadRedListRecentObs(reader);
+                result.Add(redListData);
+            }
+        }
+        await conn.CloseAsync();
+        return result;
+    }
+    
 
 }
