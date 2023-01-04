@@ -3,11 +3,11 @@ using redlist_birds_api.Models;
 
 namespace redlist_birds_api.ExternalApiSetup;
 
-public class EbirdConnection
+public class EbirdConnection : IEbirdConnection
 {
-    List<RecentObservations> result ;
+    List<RecentObservations> result;
     public IConfiguration _configuration;
-    
+
     public EbirdConnection(IConfiguration configuration)
     {
         _configuration = configuration;
@@ -24,8 +24,8 @@ public class EbirdConnection
         // Add individual Api Key and Value to request headers to accept Api from asppsettings.json
         requestMessage.Headers.Add(_configuration.GetValue<string>("EBirdInformation:EBirdKey"), _configuration.GetValue<string>("EBirdInformation:EBirdValue"));
 
-        HttpResponseMessage response = new HttpResponseMessage ();
-        HttpClient eBirdClient = new HttpClient ();
+        HttpResponseMessage response = new HttpResponseMessage();
+        HttpClient eBirdClient = new HttpClient();
         response = await eBirdClient.SendAsync(requestMessage);
 
         // Check if the responce ok -> do serialization to List<RecentObservations> and return it

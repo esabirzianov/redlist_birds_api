@@ -1,8 +1,8 @@
 using redlist_birds_api.Models;
 
-namespace redlist_birds_api.Interfaces;
+namespace redlist_birds_api.MethodsForController;
 
-public interface IMethodsForRequests
+public interface IBirdInformationRequests
 {
     Task<List<RecentObservations>> GetRecentObservations();
     Task DeleteObservation(string subId);

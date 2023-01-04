@@ -7,7 +7,7 @@ public class RedListOperator
 {
     public static List<RedListData> LoadRedListDataJson()
     {
-        using (StreamReader reader = new StreamReader("/Users/emil/Desktop/redlist_birds_api-master/DatabaseContext/RedListData.json"))
+        using (StreamReader reader = new StreamReader("RedListData.json"))
         {
             string json = reader.ReadToEnd();
             var redListData = JsonConvert.DeserializeObject<List<RedListData>>(json);

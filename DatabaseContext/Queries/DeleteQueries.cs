@@ -2,11 +2,11 @@ using Npgsql;
 
 namespace redlist_birds_api.DatabaseContext;
 
-public class DeleteQueries
+public class DeleteQueries : IDeleteQueries
 {
     private readonly IDbConnectionHelper _dbConnectionHelper;
 
-    public DeleteQueries (IDbConnectionHelper dbConnectionHelper) 
+    public DeleteQueries(IDbConnectionHelper dbConnectionHelper)
     {
         _dbConnectionHelper = dbConnectionHelper;
     }
