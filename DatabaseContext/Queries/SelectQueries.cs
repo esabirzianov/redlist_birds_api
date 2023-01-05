@@ -24,6 +24,13 @@ public class SelectQueries : ISelectQueries
         await using var cmd = new NpgsqlCommand(queryText);
         return await _dbConnectionHelper.SelectRecentObservationsConnection(cmd);
     }
+    
+    public async Task<List<RecentObservations>> SelectObservationsBySubId(string subId)
+    {
+        var queryText = $"SELECT * FROM ebird_data WHERE checklist_id = '{subId}'";
+        await using var cmd = new NpgsqlCommand(queryText);
+        return await _dbConnectionHelper.SelectRecentObservationsConnection(cmd);
+    }
 
     public async Task<List<RedListData>> SelectRedListData()
     {

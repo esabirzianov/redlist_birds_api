@@ -8,4 +8,5 @@ public interface ISelectQueries
     Task<List<RecentObservations>> SelectObservationsByComName(string comName);
     Task<List<RedListData>> SelectRedListData();
     Task<List<RedListRecentObservations>> SelectRedListRecentObservations();
+     Task<List<RecentObservations>> SelectObservationsBySubId(string subId);
 }
