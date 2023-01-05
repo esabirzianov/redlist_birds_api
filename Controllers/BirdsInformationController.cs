@@ -52,6 +52,11 @@ public class BirdsInformationController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)] 
     public async Task<ActionResult> DeleteObservations (string subId) 
     {
+        var result = await _birdInformationRequests.GetRecentObservationsBySubId(subId);
+        if (result.Count == 0) 
+        {
+            return NotFound();
+        }
         await _birdInformationRequests.DeleteObservation(subId);
         return NoContent();
     }
@@ -62,6 +67,11 @@ public class BirdsInformationController : ControllerBase
     
     public async Task<ActionResult> UpdateObservation (string subId, string comName, int howMany) 
     {
+        var result = await _birdInformationRequests.GetRecentObservationsBySubId(subId);
+        if (result.Count == 0) 
+        {
+            return NotFound();
+        }
         await _birdInformationRequests.UpdateObservation(subId,comName,howMany);
         return NoContent();
     }

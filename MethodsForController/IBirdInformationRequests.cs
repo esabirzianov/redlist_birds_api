@@ -12,5 +12,6 @@ public interface IBirdInformationRequests
     Task<RecentObservations> CreateObservation(string _comName, string _locName, int _howMany);
 
     Task UpdateObservation(string subId, string comName, int howMany);
+    Task<List<RecentObservations>> GetRecentObservationsBySubId(string subId);
 
 }

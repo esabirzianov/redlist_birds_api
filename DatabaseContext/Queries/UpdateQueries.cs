@@ -15,9 +15,7 @@ public class UpdateQueries : IUpdateQueries
     {
         // Update row based on subId data an when return updated row
         var queryText = $"UPDATE ebird_data SET common_name = '{comName}', how_many_observed = '{howMany}' WHERE checklist_id = '{subId}'";
-
         await using var cmd = new NpgsqlCommand(queryText);
-
         await _dbConnectionHelper.CreateConnectionIUD(cmd);
     }
 }

@@ -16,6 +16,7 @@ internal class Program
         builder.Services.AddSingleton<IBirdInformationRequests, BirdInformationRequests>();
         builder.Services.AddSingleton<IDbConnectionHelper, DbConnectionHelper> ();
         builder.Services.AddSingleton<IRedListRequests, RedListRequests> ();
+        builder.Services.AddSingleton<IFactoryForQueries, FactoryForQueries> ();
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
