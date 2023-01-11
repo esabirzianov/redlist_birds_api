@@ -1,19 +1,17 @@
-## Введение
-EBird - это глобальная платформа и база данных наблюдений за птицами предоставляющая ученым, исследователям и натуралистам-любителям данные о распространении и численности птиц.
-Эти наблюдения фиксируются в формате чек-листов, которые включают в себя место наблюдения, дату и время, виды птиц и их количество.
+## Introduction
+EBird is a global platform and database of bird observations providing scientists, researchers and amateur naturalists with data on the distribution and abundance of birds.
+These observations are recorded in the format of checklists, which include the place of observation, date and time, bird species and their number.
 
-## Цель проекта
-Так как EBird не обладает удобным функционалом для отслеживания редких и занесенных в Красную Книгу птиц - я решил создать удобный API, который можно встроить в веб-приложение и тем самым расширить возможности организаций по охране природы.
+## Goal of project
+Create a convenient Web Api to simplify the work of nature protection organizations.
 
-## Функционал
-BirdInformationController собирает данные из API EBird о редко встречающихся птицах и выводит их пользователю. Также есть возможность фильтровать наблюдения по определенному виду, удалять их, изменять и добавлять новые. 
+## Functional
+BirdInformationController collects data from the eBird API about rare birds and outputs them to the user. It is also possible to filter observations by a certain type, delete them, change and add new ones.
 
-RedListController позволяет просматривать список птиц, занесенных в красную книгу и выводит информацию о последних наблюдениях за этими видами.
+Red List Controller allows you to view the list of birds listed in the Red Book and displays information about the latest sightings of these species.
 
-Все действия в http-запросах интегрированы с базой данных.
+All actions in HTTP requests are integrated with the Database.
 
-
-## Заметки
-Данный проект выводит информацию только по региону Турция.
-
+## Notes
+This project displays information only for the Turkey region.
 
